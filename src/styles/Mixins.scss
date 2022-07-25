@@ -1,0 +1,14 @@
+@mixin container {
+  margin: auto;
+  max-width: 120rem;
+  padding: 9rem 2rem;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+
+@mixin bg-degrade {
+  background: rgb(3,55,128);
+  background: linear-gradient(132deg, rgba(3,55,128,1) 0%, rgba(4,13,33,1) 30%, rgba(4,13,33,1) 70%, rgba(101,31,101,1) 100%);
+}

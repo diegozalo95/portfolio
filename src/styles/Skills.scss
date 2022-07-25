@@ -1,0 +1,62 @@
+@import 'Variables.scss';
+@import 'Mixins.scss';
+
+.skills {
+  &__container {
+    @include container;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font: $title-size $custom-font;
+    color: $main-color;
+    text-align: center;
+    margin-bottom: 5rem;
+
+    @media (max-width: $screen-md) {
+      font-size: 3.2rem;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-gap: 3rem;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (min-width: $screen-sm) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__item {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+
+    @media (min-width: $screen-sm) {
+      align-items: flex-start;
+      flex-direction: row;
+    }
+  }
+
+  &__name {
+    color: $dark-color;
+    font: $text-size $main-font;
+    margin-top: 1.5rem;
+
+
+    @media (min-width: $screen-sm) {
+      margin-left: 1.5rem;
+      min-width: 13rem;
+    }
+  }
+
+  &__logo {
+    font-size: 5rem;
+  }
+
+}

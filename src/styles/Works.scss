@@ -1,0 +1,76 @@
+@import 'Variables.scss';
+@import 'Mixins.scss';
+
+.works {
+  background-color: $almost-white-color;
+
+  &__container {
+    @include container;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 12rem;
+  }
+
+  &__title {
+    font: $title-size $custom-font;
+    color: $main-color;
+    text-align: center;
+    margin-bottom: 3.5rem;
+
+    @media (max-width: $screen-md) {
+      font-size: 3.2rem;
+    }
+  }
+
+  &__link {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    background-color: $white-color;
+    box-shadow: 6px 5px 15px -2px rgba(196,196,196,0.46);
+    border-radius: 2rem;
+    transition: transform .5s, background-color .5s;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0;
+      background-color: $main-color;
+
+      .works__name,
+      .works__see {
+        color: $white-color;
+      }
+    }
+  }
+
+  &__name {
+    font: 2.5rem $custom-font;
+    color: $dark-color;
+    margin-bottom: 1rem;
+    transition: color .5s;
+  }
+
+  &__see {
+    font: 1.7rem $main-font;
+    font-weight: 700;
+    color: $main-color;
+    transition: color .5s;
+  }
+
+  .splide {
+    &__slide {
+      padding: 1.5rem;
+    }
+
+    &__pagination {
+      margin-bottom: -5rem;
+
+      &__page {
+        &.is-active {
+          background-color: $main-color;
+        }
+      }
+    }
+  }
+
+}
